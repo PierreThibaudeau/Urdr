@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
@@ -7,12 +9,10 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * This is a dummy entity. Remove it!
- *
  * @ORM\Entity
  */
 #[ApiResource(mercure: true)]
-class Greeting
+class Timeline
 {
     /**
      * The entity ID
@@ -24,12 +24,10 @@ class Greeting
     private ?int $id = null;
 
     /**
-     * A nice person
-     *
      * @ORM\Column
      */
     #[Assert\NotBlank]
-    public string $name = '';
+    public string $name;
 
     public function getId(): ?int
     {
