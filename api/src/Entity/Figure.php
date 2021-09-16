@@ -28,7 +28,12 @@ class Figure
      * @ORM\Column
      */
     #[Assert\NotBlank]
-    public string $name;
+    public string $firstname;
+
+    /**
+     * @ORM\Column
+     */
+    public string $lastname;
 
     /**
      * @ORM\Column
