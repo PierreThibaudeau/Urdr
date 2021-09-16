@@ -31,6 +31,23 @@ class Figure
     public string $name;
 
     /**
+     * @ORM\Column
+     */
+    public string $description;
+
+    /**
+     * @ORM\Column
+     */
+    #[Assert\Url]
+    public string $icon;
+
+    /**
+     * @ORM\Column
+     */
+    #[Assert\Url]
+    public string $source;
+
+    /**
      * @ORM\Column(type="datetime")
      */
     public DateTime $date_birth;

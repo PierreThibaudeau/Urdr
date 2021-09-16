@@ -28,7 +28,29 @@ class Event
      * @ORM\Column
      */
     #[Assert\NotBlank]
-    public string $name;
+    public string $title;
+
+    /**
+     * @ORM\Column
+     */
+    #[Assert\NotBlank]
+    public string $summary;
+
+    /**
+     * @ORM\Column
+     */
+    public string $description;
+
+    /**
+     * @ORM\Column
+     */
+    #[Assert\Url]
+    public string $source;
+
+    // TODO - add relations
+    // Figures
+    // Author
+    // Timeline
 
     /**
      * @ORM\Column(type="datetime")
